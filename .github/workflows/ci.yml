@@ -14,19 +14,19 @@ jobs:
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: website_frontend
-        tags: dev_latest
-        dockerfile: Dockerfile.dev
+        image: schoolwell
+        tags: latest
+        dockerfile: Dockerfile
         registry: ghcr.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_TOKEN }}
-  deployment:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy
-        run: |
-          curl -sS -d 'auth_key=${{ secrets.DEPLOY_AUTH_KEY }}' \
-          -d 'name=afg_frontend_dev' -d 'image=ghcr.io/africasgeeks/website_frontend:dev_latest' \
-          -d 'network=bridge' -d 'v_map=no' -d 'port_ex=127.0.0.1:2002' -d 'port_in=80' \
-          -X POST -H 'Content-Type: application/x-www-form-urlencoded' '${{ secrets.DEPLOY_URL }}'
+ # deployment:
+  #  needs: build
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #    - name: deploy
+   #     run: |
+   #       curl -sS -d 'auth_key=${{ secrets.DEPLOY_AUTH_KEY }}' \
+  #        -d 'name=schoolwell_frontend_dev' -d 'image=ghcr.io/africasgeeks/website_frontend:dev_latest' \
+  #        -d 'network=bridge' -d 'v_map=no' -d 'port_ex=127.0.0.1:2002' -d 'port_in=80' \
+    #      -X POST -H 'Content-Type: application/x-www-form-urlencoded' '${{ secrets.DEPLOY_URL }}'
