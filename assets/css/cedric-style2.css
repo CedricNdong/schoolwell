@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar&family=Raleway:ital@1&family=Roboto+Serif:ital,opsz,wght@1,8..144,800&family=Send+Flowers&display=swap');
+
+/*
+---------------------------------------------
+impressum page
+datenschutz page
+---------------------------------------------
+*/
+body {
+    background-color: #dedede;
+
+}
+h1{
+    background: rgb(131,58,180);
+    background: linear-gradient(319deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 20%, rgba(252,176,69,1) 100%);
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+    font-family: 'Eczar', serif;
+    text-shadow: 3px 3px 3px #ababab;
+    font-size: 60px;
+    border-radius: 70px 70px 70px 0px;
+}
+h2{
+    color: #C70000;
+    font-size: 30px;
+}
+h3 ,h4 ,h5 , h6{
+    margin-left: 30px;
+
+}
+h4 {
+   color: #0a53be;
+}
+p{
+    margin-left: 50px;
+}
